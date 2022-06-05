@@ -1,4 +1,4 @@
-exports.let toRoman = function(num) {
+exports.toRoman = function(num) {
 
     let romanArr = [];
   
@@ -16,10 +16,10 @@ exports.let toRoman = function(num) {
       V : 5,
       IV : 4,
       I : 1,
-      }
+      };
       
       for (let i of Object.keys(romanNumerals)) {
-        if (num >= romanNumerals[i]) {
+        while (num >= romanNumerals[i]) {
           romanArr.push(i);
           num -= romanNumerals[i];
         }
